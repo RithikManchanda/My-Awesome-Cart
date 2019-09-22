@@ -1,0 +1,62 @@
+{% extends 'shop/basic.html' %}
+
+
+{% block title %}feel free to contact us,we are here to help you  {% endblock %}
+{% block body %}
+
+<div class="container">
+
+    <h3>Contact Us</h3>
+<form action="/shop/contact/"  method="post">{% csrf_token %}
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="name" class="form-control" id="name" name="name" placeholder="Enter Your Name">
+  </div>
+
+  <div class="form-group">
+    <label for="Email">Email</label>
+    <input type="Email" class="form-control" id="Email" name="Email" placeholder="Email">
+  </div>
+
+    <div class="form-group">
+    <label for="Contact No.">Contact No.</label>
+    <input type="Contact No." class="form-control" id="Contact No." name="Contact No." placeholder="Contact No.">
+  </div>
+
+    <div class="form-group">
+    <label for="Address">Address</label>
+    <input type="Address" class="form-control" id="Address" name="Address" placeholder="Address">
+  </div>
+
+      <div class="form-group">
+    <label for="desc">Tell About Your Query Here</label>
+    <textarea class="form-control" id="desc" rows="3"></textarea>
+  </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+</form>
+
+ </div>
+
+{% endblock %}
+
+  {% block js %}
+  <script>
+
+
+     {% if thank %}
+
+     alert('Thanks for contacting us.We will get back to you soon');
+
+     document.location="/shop/contact";
+
+     {% endif %}
+
+  </script>
+
+  {% endblock %}
+
+
+
+

@@ -1,0 +1,38 @@
+{% extends 'shop/basic.html' %}
+
+
+{% block title %}Tracker-My Awesome Cart{% endblock %}
+{% block body %}  
+
+<div class="container">
+  
+
+  <div class='col my-4 '>
+    <h2>Payment Status Regarding Your Order Id {{response.ORDERID}}</h2>
+
+      {% if response.RESPCODE == '01' %}
+      ORDER SUCCESFUL
+
+      {% else %}
+      ORDER FAILURE
+
+      {% endif %}
+
+
+
+    </div>
+    </div>
+
+
+
+ {% endblock %}
+
+ {% block js %}
+ <script >
+
+
+
+
+</script>
+
+  {% endblock %}
