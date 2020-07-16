@@ -89,7 +89,7 @@
                   <div class="card" style="width: 18rem; height:25rem;">
                       <img src='/media/{{i.image}}'class="card-img-top" style="margin:auto;"alt="100%x280">
                       <div class="card-body">
-                        <h5 class="card-title" id="namepr{{i.id}}">{{i.product_name}}</h5>
+                        <h5 class="card-title" id="namepr{{i.id}}">{{i.product_name|slice:"0:20"}}</h5>
                         <h3 class="card-amount" >Rs.<span id="amountpr{{i.id}}">{{i.price}}</span></h3>
                         <p class="card-text">{{i.desc|slice:"0:60"}}...</p>
                         <span id="divpr{{i.id}}" class="divpr" style"color:black;">

@@ -7,7 +7,7 @@ class product(models.Model):
     category=models.CharField(max_length=50,default="")
     sub_category=models.CharField(max_length=50,default="")
     price=models.IntegerField(default=0)
-    desc=models.CharField(max_length=500)
+    desc=models.TextField()
     pub_date=models.DateField()
     image=models.ImageField(upload_to="shop/images" ,default="")
 
